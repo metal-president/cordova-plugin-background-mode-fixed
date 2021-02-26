@@ -1,13 +1,12 @@
 {
   "name": "cordova-plugin-background-mode-fixed",
-  "version": "0.7.5",
+  "version": "0.7.9",
   "description": "Prevent apps from going to sleep in background. iOS fix.",
   "cordova": {
     "id": "cordova-plugin-background-mode-fixed",
     "platforms": [
       "ios",
-      "android",
-      "browser"
+      "android"
     ]
   },
   "repository": {
@@ -19,21 +18,16 @@
     "background",
     "ecosystem:cordova",
     "cordova-ios",
-    "cordova-android",
-    "cordova-browser"
+    "cordova-android"
   ],
   "engines": [
     {
-      "name": "cordova",
-      "version": ">=3.0.0"
+      "name": "cordova-android",
+      "version": ">=3.6.0"
     },
     {
-      "name": "android-sdk",
-      "version": ">=16"
-    },
-    {
-      "name": "windows-sdk",
-      "version": ">=10.0.14393.0"
+      "name": "cordova-ios",
+      "version": ">=4.0.0"
     }
   ],
   "author": "Sebastián Katzer",

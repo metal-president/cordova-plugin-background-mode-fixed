@@ -1,4 +1,7 @@
 ## ChangeLog
+#### Version 0.7.6
+- Restored iOS background audio mode 
+
 #### Version 0.7.5
 - Fixed onactivate call
 - Merged new Android permissions
