@@ -222,7 +222,7 @@ public class ForegroundService extends Service {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             PendingIntent contentIntent = PendingIntent.getActivity(
                     context, NOTIFICATION_ID, intent,
-                    PendingIntent.FLAG_UPDATE_CURRENT);
+                    preparePendingIntentFlags(PendingIntent.FLAG_UPDATE_CURRENT));
 
 
             notification.setContentIntent(contentIntent);
@@ -320,4 +320,12 @@ public class ForegroundService extends Service {
     {
         return (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     }
+
+    static int preparePendingIntentFlags(int flags) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            return flags | PendingIntent.FLAG_IMMUTABLE;
+        } else {
+            return flags;
+        }
+    }    
 }
